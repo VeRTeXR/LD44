@@ -3445,6 +3445,7 @@ MonoBehaviour:
   GameplayPanel: {fileID: 1036913529592624}
   FinishPanel: {fileID: 1963307604742610}
   MainMenuPanel: {fileID: 2244884462907119704}
+  PanelBackground: {fileID: 159020}
 --- !u!1 &199498
 GameObject:
   m_ObjectHideFlags: 0

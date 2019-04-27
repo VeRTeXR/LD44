@@ -10,6 +10,7 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject GameplayPanel;
 	public GameObject FinishPanel;
 	public GameObject MainMenuPanel;
+	public GameObject PanelBackground;
 
 	public void ShowOptionsPanel () {
 		Debug.LogError ("showOption");
@@ -17,6 +18,17 @@ public class ShowPanels : MonoBehaviour {
 		OptionsTint.SetActive (true);
 		FadeInOptionTint ();
 
+	}
+
+	public void FadeOutPanelBackground () {
+		var panelCanvasGroup = PanelBackground.GetComponent<CanvasGroup> ();
+		LeanTween.alphaCanvas (panelCanvasGroup, 0, 0.3f).setOnComplete (() => PanelBackground.SetActive (false));
+	}
+
+	public void FadeInPanelBackground () {
+		PanelBackground.SetActive (true);
+		var panelCanvasGroup = PanelBackground.GetComponent<CanvasGroup> ();
+		LeanTween.alphaCanvas (panelCanvasGroup, 1, 0.3f);
 	}
 
 	private void FadeInOptionTint () {

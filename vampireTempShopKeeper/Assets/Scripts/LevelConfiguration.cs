@@ -29,17 +29,25 @@ public class LevelConfiguration : MonoBehaviour {
         _currentDay = day;
         _currentState = State.Day;
 
-        GoToMapSelection ();
+        GoToMapSelection (_currentState);
     }
 
-    private void GoToMapSelection()
-    {
-        throw new NotImplementedException();
+
+    private void GoToMapSelection (State state) {
+        if (state == State.Day) {
+
+        } else if (state == State.PrepNight) {
+
+        } else if (state == State.Night) {
+
+        }
+
     }
 
     internal void TextSequenceFinished (string sequenceName) {
         Debug.LogError (sequenceName + " Finished");
         if (sequenceName.Equals ("Intro")) {
+            GameStateManager.Instance.StartMenu.GetComponentInChildren<ShowPanels> ().FadeOutPanelBackground ();
             LoadDay (1);
         }
 
