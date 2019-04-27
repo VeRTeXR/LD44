@@ -28,7 +28,13 @@ public class LevelConfiguration : MonoBehaviour {
         Debug.LogError ("day : " + day);
         _currentDay = day;
         _currentState = State.Day;
-        
+
+        GoToMapSelection ();
+    }
+
+    private void GoToMapSelection()
+    {
+        throw new NotImplementedException();
     }
 
     internal void TextSequenceFinished (string sequenceName) {
