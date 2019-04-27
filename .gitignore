@@ -20,7 +20,9 @@ ArkSocketServer/.idea
 Client/UnityProject/Assets/Plugins/Editor/JetBrains
 JetBrains.meta
 BOB-BossOfBots-98a11d9579b0.json
-foodBoi/Library
+vampireTempShopKeeper/Library
+vampireTempShopKeeper/Temp
+vampireTempShopKeeper/Obj
 
 # This .gitignore file should be placed at the root of your Unity project directory
 
