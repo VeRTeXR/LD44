@@ -68,6 +68,11 @@ public class GameStateManager : MonoBehaviour {
         _currentBlood = 0;
     }
 
+    public void AddBlood(int blood)
+    {
+        _currentBlood += blood;
+    }
+    
     public void InitGameManager () {
         // var eventManager = SuperTagsSystem.GetObjectsWithTag("EventManager");
         // eventManager[0].GetComponent<PlayerEventManager> ().Initialize ();

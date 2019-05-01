@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NightLogo
+  m_Name: PubSelected
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a707796678633465782fe0dcc1229617, type: 3}
+      value: {fileID: 21300000, guid: 26f7b6ff601c4184d97835a270220d2f, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: f949e35ba7e684a03b73f070474f7f46, type: 3}
+      value: {fileID: 21300000, guid: fa5c488ffc49f9a4da3cf9dcece74801, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: a09db43f20e0f4ab8abeb67694aa0439, type: 3}
+      value: {fileID: 21300000, guid: 40e00a5b95a8c9749ba5fd8d6c479d44, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a707796678633465782fe0dcc1229617, type: 3}
-    - {fileID: 21300000, guid: f949e35ba7e684a03b73f070474f7f46, type: 3}
-    - {fileID: 21300000, guid: a09db43f20e0f4ab8abeb67694aa0439, type: 3}
+    - {fileID: 21300000, guid: 26f7b6ff601c4184d97835a270220d2f, type: 3}
+    - {fileID: 21300000, guid: fa5c488ffc49f9a4da3cf9dcece74801, type: 3}
+    - {fileID: 21300000, guid: 40e00a5b95a8c9749ba5fd8d6c479d44, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
