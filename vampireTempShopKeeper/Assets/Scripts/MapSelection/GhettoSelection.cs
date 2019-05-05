@@ -1,29 +1,29 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class GhettoSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class GhettoSelection : ISelection
 {
-    private Animator _animator;
-
+    
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
     }
 
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.SetBool("Selected", true);
+        Animator.SetBool("Selected", true);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public override void OnPointerExit(PointerEventData eventData)
     {
         
-        _animator.SetBool("Selected", false);
+        Animator.SetBool("Selected", false);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public override void OnPointerDown(PointerEventData eventData)
     {
         throw new System.NotImplementedException();
     }
 }
+

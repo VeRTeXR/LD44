@@ -8,7 +8,7 @@ public class DialogueSequenceManager : MonoBehaviour
 
     [SerializeField] private DialogueNpcManager _dialogueNpcManager;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         _dialogueTextManager = GetComponentInChildren<DialogueTextManager>();
@@ -18,9 +18,11 @@ public class DialogueSequenceManager : MonoBehaviour
 
     public void StartDialogueSequence(LevelConfiguration.Dialogue key)
     {
+        Debug.LogError("key : "+key);
         gameObject.SetActive(true);
         _dialogueTextManager.LoadDialogue(key);
         _dialogueTextManager.gameObject.SetActive(true);
-
+        
+        _dialogueNpcManager.SetCharacter(key);
     }
 }

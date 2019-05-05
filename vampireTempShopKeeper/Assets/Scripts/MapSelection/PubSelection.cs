@@ -1,32 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PubSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class PubSelection : ISelection
 {
-    private Animator _animator;
+    private LevelConfiguration _levelConf;
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        Animator= GetComponent<Animator>();
+        _levelConf = GameStateManager.Instance.GetLevelConfigurator();
     }
 
     private void StartPubSequence()
     {
-         
+//        _levelConf.GoToDialogueSequence(LevelConfiguration.Dialogue.SaleOperation);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.SetBool("Selected" , true);
+        Animator.SetBool("Selected" , true);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public override void OnPointerExit(PointerEventData eventData)
     {
-        _animator.SetBool("Selected" , false);
+        Animator.SetBool("Selected" , false);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public override void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        StartPubSequence();
     }
 }

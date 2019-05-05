@@ -41,6 +41,7 @@ public class StartMenuController : MonoBehaviour {
 	}
 
 	internal void NewGameButtonClicked () {
+		GameStateManager.Instance.GameplayArea.SetActive(true);
 		var _levelConf = GameStateManager.Instance.GetLevelConfigurator ();
 		_showPanels.HideStartPanel ();
 		_levelConf.LoadIntro ();

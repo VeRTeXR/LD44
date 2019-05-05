@@ -98,9 +98,7 @@ public class TextBoxManager : MonoBehaviour
 	{
 		gameObject.SetActive(true);
 		isActive = true;
-		Debug.LogError(GetComponent<TextImporter>());
 		textLines = GetComponent<TextImporter>().TextLines;
-		Debug.LogError(textLines.Length);
 		StartCoroutine(TextScroll(textLines[currentLine]));
 	}
 

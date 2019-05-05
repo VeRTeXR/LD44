@@ -21,7 +21,9 @@ public class ShowPanels : MonoBehaviour {
 	}
 
 	public void FadeOutPanelBackground () {
+		
 		var panelCanvasGroup = PanelBackground.GetComponent<CanvasGroup> ();
+		Debug.LogError(panelCanvasGroup );
 		LeanTween.alphaCanvas (panelCanvasGroup, 0, 0.3f).setOnComplete (() => PanelBackground.SetActive (false));
 	}
 

@@ -1,38 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ApartmentSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class ApartmentSelection : ISelection
 {
-    private Animator _animator;
+ 
     private int _bloodRestore;
     void Start()
     {
-        _animator = GetComponent<Animator>();
-       
-        Debug.LogError("Start:: ");
+        Animator = GetComponent<Animator>();       
     }
 
     private void GoToApartmentSequence()
     {
-       Debug.LogError("GotoApartSequence");
        GameStateManager.Instance.AddBlood(_bloodRestore);    
     }
     
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.SetBool("Selected",true);
-        Debug.LogError("enter");
+        Animator.SetBool("Selected",true);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public override void OnPointerExit(PointerEventData eventData)
     {
-        _animator.SetBool("Selected",false);
-        Debug.LogError("exit");
+        Animator.SetBool("Selected",false);
     }
 
 
-    public void OnPointerDown(PointerEventData eventData)
+    public override void OnPointerDown(PointerEventData eventData)
     {
         GoToApartmentSequence();
     }

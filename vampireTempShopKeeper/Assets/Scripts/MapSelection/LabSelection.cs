@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LabSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class LabSelection : ISelection
 {
-    private Animator _animator;
-    
-    
     
     void Start()
     {
-        _animator = GetComponent<Animator>();
-        _animator.SetBool("Selected", false);
+        Animator = GetComponent<Animator>();
     }
 
     public void Setup()
@@ -18,19 +14,23 @@ public class LabSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public override void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.SetBool("Selected", true);
-        Debug.LogError("Enter");
+        Animator.SetBool("Selected", true);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public override void OnPointerExit(PointerEventData eventData)
     {
-        _animator.SetBool("Selected", false);
+        Animator.SetBool("Selected", false);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public override void OnPointerDown(PointerEventData eventData)
     {
-        Debug.LogError("GotoLabSequence");
+        GoToLabSequence();
+    }
+
+    private void GoToLabSequence()
+    {
+        throw new System.NotImplementedException();
     }
 }

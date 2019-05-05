@@ -17,7 +17,7 @@ public class GameStateManager : MonoBehaviour {
     public BloodPactTracker BloodPactTracker;
     public DealTracker DealTracker;
     
-    private LevelConfiguration _levelConfigurator;
+    public LevelConfiguration _levelConfigurator;
     private Text _levelText;
 
     private int _currentMoney;
@@ -45,6 +45,8 @@ public class GameStateManager : MonoBehaviour {
         if(BloodPactTracker == null) Debug.LogError( "BloodPactTracker Missing");
         DealTracker = GetComponent<DealTracker>(); 
         if(DealTracker == null) Debug.LogError("DealTracker Missing");
+        
+        GameplayArea.SetActive(false);
     }
 
     public LevelConfiguration GetLevelConfigurator () {

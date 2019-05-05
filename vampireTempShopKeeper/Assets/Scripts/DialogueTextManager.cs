@@ -18,14 +18,11 @@ public class DialogueTextManager : MonoBehaviour
     private bool _isTyping;
     private bool _cancelTyping;
     public float TypeSpeed;
-    
-    
 
     private void OnEnable()
     {
         CurrentText = GetComponentInChildren<TextMeshProUGUI>();
         _textImporter = GetComponentInChildren<TextImporter>();
-        Debug.LogError("Importer : "+_textImporter);
         
         if (TextFile != null)
         {
@@ -57,9 +54,7 @@ public class DialogueTextManager : MonoBehaviour
     {
        gameObject.SetActive(true);
        		IsActive = true;
-       		Debug.LogError(GetComponent<TextImporter>());
        		TextLines = GetComponent<TextImporter>().TextLines;
-       		Debug.LogError(TextLines.Length);
        		StartCoroutine(TextScroll(TextLines[CurrentLine]));
     }
     
@@ -117,7 +112,6 @@ public class DialogueTextManager : MonoBehaviour
 
     public void LoadDialogue(LevelConfiguration.Dialogue key)
     {
-        Debug.LogError("f: "+key);
         if (_textImporter == null) GetComponentInChildren<TextImporter>();
         _textImporter.Load(key);
         EnableTextBox();
