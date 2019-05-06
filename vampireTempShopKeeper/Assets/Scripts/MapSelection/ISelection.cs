@@ -7,6 +7,12 @@ public class ISelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandl
 {
 
     public Animator Animator;
+    public bool IsDisabled;
+
+    public virtual void Setup(LevelConfiguration.State state, int currentDate)
+    {
+        throw new System.NotImplementedException();
+    }
     
     public virtual void OnPointerDown(PointerEventData eventData)
     {
@@ -22,4 +28,5 @@ public class ISelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandl
     {
         throw new System.NotImplementedException();
     }
+
 }

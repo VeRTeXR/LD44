@@ -28,5 +28,10 @@ public class MapSelectionManager : MonoBehaviour
     {    
         _turnStateIcon.SetTurnAnimatorState(state);
         _dayIcon.SetDaySprite(currentDate);
+
+        foreach (var mapEntry in mapEntries)
+        {
+          mapEntry.Setup(state, currentDate);   
+        }
     }
 }

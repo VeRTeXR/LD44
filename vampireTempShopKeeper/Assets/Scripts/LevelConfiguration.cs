@@ -49,8 +49,8 @@ public class LevelConfiguration : MonoBehaviour
     {
         Debug.LogError("day : " + day);
         _currentDay = day;
-        _currentState = State.PrepNight;
-
+        _currentState = State.Day;
+    
         GoToMapSelection(_currentState);
     }
 
