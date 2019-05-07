@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class GhettoSelection : ISelection
@@ -8,6 +9,11 @@ public class GhettoSelection : ISelection
     {
         Animator = GetComponent<Animator>();
     }
+
+    public override void Setup(LevelConfiguration.State state, int currentDate)
+    {
+        Debug.LogError("GhettoSetup ");
+     }
 
 
     public override void OnPointerEnter(PointerEventData eventData)

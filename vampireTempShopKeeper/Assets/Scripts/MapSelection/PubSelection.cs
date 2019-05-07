@@ -10,6 +10,11 @@ public class PubSelection : ISelection
         Animator= GetComponent<Animator>();
         _levelConf = GameStateManager.Instance.GetLevelConfigurator();
     }
+   
+    public override void Setup(LevelConfiguration.State state, int currentDate)
+    {
+//        Debug.LogError();
+    }
 
     private void StartPubSequence()
     {

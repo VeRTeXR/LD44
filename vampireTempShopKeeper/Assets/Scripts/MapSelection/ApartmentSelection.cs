@@ -29,6 +29,7 @@ public class ApartmentSelection : ISelection
         {
             var actionList = GenerateActionList();
             actionCanvas.GenerateActions(actionList);
+            actionCanvas.gameObject.SetActive(false);
         }
     }
 
@@ -99,6 +100,6 @@ public class ApartmentSelection : ISelection
     private void ShowAvailableActions()
     {
         Debug.LogError("ShowAvailableActions");
-//        var actionList = Instantiate();
+        actionCanvas.gameObject.SetActive(true);
     }
 }

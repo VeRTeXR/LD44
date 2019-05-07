@@ -9,10 +9,11 @@ public class LabSelection : ISelection
         Animator = GetComponent<Animator>();
     }
 
-    public void Setup()
+    public override void Setup(LevelConfiguration.State state, int currentDate)
     {
-        
+        Debug.LogError("Lab Setup");
     }
+
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
