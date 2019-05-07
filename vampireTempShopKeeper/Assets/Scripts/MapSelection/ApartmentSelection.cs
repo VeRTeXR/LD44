@@ -2,6 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class ApartmentSelection : ISelection
@@ -31,9 +32,9 @@ public class ApartmentSelection : ISelection
         }
     }
 
-    private List<Action> GenerateActionList()
+    private List<UnityAction> GenerateActionList()
     {
-        var actionList = new List<Action>();
+        var actionList = new List<UnityAction>();
         actionList.Add(SleepInCoffin);
         actionList.Add(CatchUpOnTheNews);
         return actionList;
